@@ -10,7 +10,7 @@
 
     if($num_rows < 1){
 
-        $tabela ='
+        $html ='
         <p class="p_nenhum_result">Nenhum Item Cadastrado!</p>
         ';
 
@@ -22,6 +22,8 @@
         ';
         
         $linhas = '';
+        $pt_concluidos = 0;
+        $pt_totais = 0;
         
         while($dado = $bd->row($query)){
 
@@ -39,6 +41,7 @@
                         <i class="fas fa-check-circle icone-info"></i>
                     </a>
                     ';
+                    $pt_concluidos++;
                     break;
             }
             
@@ -58,6 +61,8 @@
             </tr>
 
             ';
+
+            $pt_totais++;
         }
         
         $tabela .= $linhas;
@@ -66,11 +71,15 @@
             </tbody>
         </table>
         ';
+	    
+	$html = '<p class="progresso">'.$pt_concluidos.'/'.$pt_totais.' tarefas completas.</p>';
+
+        $html .= $tabela;
 
     }
 	
  
 
-    echo $tabela;
+    echo $html;
 
 ?>
