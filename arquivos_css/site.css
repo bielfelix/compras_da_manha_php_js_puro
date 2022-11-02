@@ -233,3 +233,8 @@ td, th{
     color: white;
     margin-bottom: 30px;
 }
+
+.progresso{
+    color: #0b589a;
+    font-family: 'gotham-extraBold';
+}
