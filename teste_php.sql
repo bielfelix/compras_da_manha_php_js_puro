@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `tarefas` (
   `cod` int(11) NOT NULL,
   `titulo` varchar(150) NOT NULL,
-  `status` int(1) DEFAULT 0 COMMENT '0 = pendente, 1 = concluido',
+  `status` int(1) DEFAULT 0 COMMENT '1 = pendente, 2 = concluido',
   `registro` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -39,7 +39,7 @@ CREATE TABLE `tarefas` (
 --
 
 INSERT INTO `tarefas` (`cod`, `titulo`, `status`, `registro`) VALUES
-(8, 'arroz', 0, '2022-10-31 21:17:32');
+(8, 'arroz', 1, '2022-10-31 21:17:32');
 
 --
 -- Índices para tabelas despejadas
