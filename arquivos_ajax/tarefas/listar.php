@@ -48,7 +48,7 @@
             $linhas .= '
 
             <tr>
-                <td>'.mb_strimwidth($dado['titulo'], 0, 30, "...").'</td>
+                <td>'.mb_strimwidth($dado['titulo'], 0, 38, "...").'</td>
                 <td class="info-table">
                     '.$status.'
                     <a onClick="modal_ed_tarefa'.'('.$dado['cod'].')" title="Editar | Clique para Editar">
