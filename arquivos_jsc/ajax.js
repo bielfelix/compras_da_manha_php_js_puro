@@ -169,6 +169,25 @@ function ex_tarefa(cod){
 			}
 		});	
 	}	
+}
+			
+function ex_tarefas_concluidas(){
+
+	var load = "<img src='arquivos_img/load.gif' class='loadGif'>";
+	
+	if(confirm('Tem certeza que desaja excluir?')){
+		
+		$.ajax({
+			type: "POST",
+			url: "app_blocos_ed/tarefas/ex_concluido.php",
+			beforeSend: function(retorno) {
+				$('.tarefas').html(load);
+			},
+			success: function(retorno) {
+				lista_atual();
+			}
+		});	
+	}	
 }			
 			
 			
