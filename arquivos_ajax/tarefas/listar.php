@@ -26,16 +26,16 @@
         while($dado = $bd->row($query)){
 
             switch($dado['status']){
-                case 0:
+                case 1:
                     $status = '
-                    <a onClick="status_tarefa'.'('.$dado['cod'].', 1)" title="Pendente | Clique para Concluído" class="pendente">
+                    <a onClick="status_tarefa'.'('.$dado['cod'].', 2)" title="Pendente | Clique para Concluído" class="pendente">
                         <i class="fal fa-check-circle icone-info"></i>
                     </a>
                     ';
                     break;
-                case 1:
+                case 2:
                     $status = '
-                    <a onClick="status_tarefa'.'('.$dado['cod'].', 0)" title="Concluído | Clique para Pendente" class="concluido">
+                    <a onClick="status_tarefa'.'('.$dado['cod'].', 1)" title="Concluído | Clique para Pendente" class="concluido">
                         <i class="fas fa-check-circle icone-info"></i>
                     </a>
                     ';
